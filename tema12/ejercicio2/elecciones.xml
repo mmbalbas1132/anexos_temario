@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<elecciones>
+    <zona Distrito="Distrito Centro">
+        <censo_electoral>30513</censo_electoral>
+        <votos_emitidos>25000</votos_emitidos>
+        <abstención>5513</abstención>
+        <votos_blancos>10</votos_blancos>
+        <votos_nulos>20</votos_nulos>
+    </zona>
+
+    <zona Distrito="Distrito Norte">
+        <censo_electoral>20000</censo_electoral>
+        <votos_emitidos>10000</votos_emitidos>
+        <abstención>10000</abstención>
+        <votos_blancos>20</votos_blancos>
+        <votos_nulos>204</votos_nulos>
+    </zona>
+
+    <zona Distrito="Distrito Sur">
+        <censo_electoral>30000</censo_electoral>
+        <votos_emitidos>15000</votos_emitidos>
+        <abstención>5000</abstención>
+        <votos_blancos>202</votos_blancos>
+        <votos_nulos>104</votos_nulos>
+    </zona>
+</elecciones>
+
+<!--        1. Número de zonas que existen.-->
+<!--   count(/elecciones/zona)-->
+<!--        2. Suma de todos los censos electorales.-->
+<!--   sum(/elecciones/zona/censo_electoral)  O sum(//censo_electoral)-->
+<!--        3. Abstención del distrito norte.-->
+<!--   /elecciones/zona[@Distrito="Distrito Norte"]/abstención-->
+<!--        4. Porcentaje de participación del distrito Sur.-->
+<!--   concat((/elecciones/zona[@Distrito="Distrito Sur"]/votos_emitidos div /elecciones/zona[@Distrito="Distrito Sur"]/censo_electoral) * 100, '%')
+-->
+
+<!--        5. ¿Qué distrito tiene menor participación?-->
+<!--        6. Realiza una expresión XPATH, que muestre el siguiente texto: “El distrito Norte-->
+<!--        tiene un censo_electoral de 20000 ciudadanos”.-->
+<!--   concat('El distrito ', /elecciones/zona[@Distrito="Distrito Norte"]/@Distrito, ' tiene un censo_electoral de ', /elecciones/zona[@Distrito="Distrito Norte"]/censo_electoral, ' ciudadanos')-->
+<!--        7. Muestra los votos_blancos del distrito Centro y del Sur.-->
+<!--   /elecciones/zona[@Distrito="Distrito Centro"]/votos_blancos | /elecciones/zona[@Distrito="Distrito Sur"]/votos_blancos-->
+<!--        8. Calcula el porcentaje de votos_nulos del Distrito Sur CONCATENADO CON EL SIMBOLO %-->
+<!--   concat((/elecciones/zona[@Distrito="Distrito Sur"]/votos_nulos div /elecciones/zona[@Distrito="Distrito Sur"]/votos_emitidos) * 100, '%')-->
