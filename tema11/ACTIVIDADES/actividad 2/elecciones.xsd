@@ -1,48 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
-    <xs:element name="elecciones">
+    <!-- Definición del esquema para el archivo "elecciones.xml" -->
 
+    <!-- Elemento raíz "elecciones" -->
+    <xs:element name="elecciones">
         <xs:complexType>
             <xs:sequence>
-                <xs:element ref="descripcion"/>
-                <xs:element ref="datos"/>
-                <xs:element ref="resultados"/>
+                <!-- Elemento obligatorio "descripcion" que contiene texto -->
+                <xs:element name="descripcion" type="xs:string"/>
+
+                <!-- Elemento obligatorio "datos" -->
+                <xs:element name="datos">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <!-- Elementos obligatorios dentro de "datos" -->
+                            <xs:element name="fecha" type="xs:date"/>
+                            <xs:element name="censados" type="xs:integer"/>
+                            <xs:element name="abstenciones" type="xs:integer"/>
+                            <xs:element name="blancos" type="xs:integer"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <!-- Elemento obligatorio "resultados" -->
+                <xs:element name="resultados">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <!-- Elemento "partido" que puede repetirse varias veces -->
+                            <xs:element name="partido" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <!-- Elementos obligatorios dentro de "partido" -->
+                                        <xs:element name="nombre" type="xs:string"/>
+                                        <xs:element name="votos" type="xs:integer"/>
+                                        <!-- Elemento opcional "representante" -->
+                                        <xs:element name="representante" type="xs:string" minOccurs="0"/>
+                                    </xs:sequence>
+                                    <!-- Atributo opcional "local" con valores "si" o "no" -->
+                                    <xs:attribute name="local" use="optional">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:enumeration value="si"/>
+                                                <xs:enumeration value="no"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
-    <xs:element name="descripcion" type="xs:string"/>
-    <xs:element name="datos">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element ref="fecha"/>
-                <xs:element ref="censados"/>
-                <xs:element ref="abstenciones"/>
-                <xs:element ref="blancos"/>
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>
-    <xs:element name="fecha" type="xs:NMTOKEN"/>
-    <xs:element name="censados" type="xs:integer"/>
-    <xs:element name="abstenciones" type="xs:integer"/>
-    <xs:element name="blancos" type="xs:integer"/>
-    <xs:element name="resultados">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element maxOccurs="unbounded" ref="partido"/>
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>
-    <xs:element name="partido">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element ref="nombre"/>
-                <xs:element ref="votos"/>
-                <xs:element minOccurs="0" ref="representante"/>
-            </xs:sequence>
-            <xs:attribute name="local" type="xs:NCName"/>
-        </xs:complexType>
-    </xs:element>
-    <xs:element name="nombre" type="xs:string"/>
-    <xs:element name="votos" type="xs:integer"/>
-    <xs:element name="representante" type="xs:NCName"/>
 </xs:schema>
