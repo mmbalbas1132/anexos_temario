@@ -31,10 +31,10 @@
 </temperaturas>
 <!-- 
 Qué previsión se tiene en Málaga para el día 11/07/2020 
-//poblacion[@nombre="Málaga"][fecha="11/07/2020"]/prevision/text()
+//poblacion[@nombre="Málaga"][fecha="11/07/2020"]/prevision/text() // viento
 
 Cuántos días de previsión se tienen de Málaga 
-count(//poblacion[@nombre="Málaga"])
+count(//poblacion[@nombre="Málaga"]) // 2.0
 
 Mostrar la temperatura máxima y mínima de Bilbao el día 9/07/2020 
 //poblacion[@nombre="Bilbao"][fecha="09/07/2020"]/maxima/text() | //poblacion[@nombre="Bilbao"][fecha="09/07/2020"]/minima/text() 
@@ -43,9 +43,5 @@ Cuántas poblaciones tendrán nubes cualquier día
 count(//poblacion[prevision="nubes"])
 
 Qué población tendrá 35º de máxima cualquier día
-//poblacion[maxima=35]/@nombre
-
-
-
-
+//poblacion[maxima=35]/@nombre   madrid
 -->
