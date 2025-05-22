@@ -1,0 +1,24 @@
+Para los siguientes elementos:
+
+<ciudad>Roma</ciudad>
+
+<fecha-de-nacimiento>1996-12-18</fecha-de-nacimiento>
+
+<hora>18:29:45</hora>
+
+<nota>7.5</nota>
+
+<apto>true</apto>
+
+Escribir sus definiciones de elementos simples correspondientes:
+Solución:
+
+<xs:element name="ciudad" type="xs:string"/>
+
+<xs:element name="fecha-de-nacimiento" type="xs:date"/>
+
+<xs:element name="hora" type="xs:time"/>
+
+<xs:element name="nota" type="xs:decimal"/>
+
+<xs:element name="apto" type="xs:boolean"/>

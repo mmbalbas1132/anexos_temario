@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <!--DEFINICIÓN-->
+    <xs:simpleType name="sexo">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="hombre" />
+            <xs:enumeration value="mujer" />
+        </xs:restriction>
+    </xs:simpleType>
+    <!--UTILIZACIÓN-->
+    <xs:element name="sexopersona" type="sexo" />
+</xs:schema>

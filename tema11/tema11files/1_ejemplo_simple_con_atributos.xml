@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alumnos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="1_ejemplo_simple_con_atributos.xsd">
+   <alumno numero="1">
+      <nombre>Eduardo Sanz Moreno</nombre>
+      <edad>19</edad>
+   </alumno>
+   <alumno numero="2">
+      <nombre>Laura Mata Ruiz</nombre>
+      <edad>22</edad>
+   </alumno>
+   <alumno numero="3">
+      <nombre>Fernando Santos Santos</nombre>
+      <edad>23</edad>
+   </alumno>
+</alumnos>

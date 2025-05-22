@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<minumero
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="2_Definicion_tipo_simple_personalizado.xsd">
+    <!--Si cambiamos el valor a un número que no esté enra 1 y 100 se marca como documento no válido-->
+34
+</minumero>
+    

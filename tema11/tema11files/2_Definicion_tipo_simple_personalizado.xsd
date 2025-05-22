@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <!--definimos
+    antes el tipo simple personalizado y luego lo utilizamos-->
+    <xs:simpleType name="entero_1_100">
+        <!--RESTRICCIÓN
+        DEL TIPO POR DEFECTO integer con FACETAS de valores máximo y mínimo-->
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="1" />
+            <xs:maxInclusive value="100" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!--UTILIZACIÓN-->
+    <xs:element name="minumero" type="entero_1_100" />
+</xs:schema>

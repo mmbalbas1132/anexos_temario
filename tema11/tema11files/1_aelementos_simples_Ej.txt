@@ -1,0 +1,30 @@
+<!--DEBEMOS TENER EN CUENTA QUE ESTE ARCHIVO SIMPLEMENTE CONTIENE UNA PETICIÓN DE DEFINICIÓN
+DE ELEMENTOS SIMPLES QUE DEBERÁN IR UBICADOS EN UN ARCHIVO DE EXTENSIÓN "xsd"-->
+
+1. Elemento simple para un nombre:
+<nombre>Alfredo</nombre>
+<xs:element name="nombre" type="xs:string" />
+
+2. Elemento simple para una edad
+<edad>34</edad>
+<xs:element name="edad" type="xs:integer"/>
+
+3. Elemento simple para una provincia
+<provincia>Alicante</provincia>
+<xs:element name="provincia" type="xs:string"/>
+
+4. Elemento simple para una puntuación con decimales
+<puntuacion>78.9</puntuacion>
+<xs:element name="puntuacion" type="xs:float"/>
+
+5. Elemento simple para definir o no un suspenso
+<suspenso>false</suspenso>
+<xs:element name="suspenso" type="xs:boolean"/>
+
+6. Elemento simple para un coche INICIALMENTE cerrado
+<coche>cerrado</coche>
+<xs:element name="coche" type="xs:string" default="cerrado" />
+
+6. Elemento simple para un planeta desaparecido PERMANENTEMENTE
+<planeta>desaparecido</planeta>
+<xs:element name="planeta" type="xs:string" fixed="desaparecido" />

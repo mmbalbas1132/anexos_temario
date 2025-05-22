@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <xs:import namespace="http://www.w3.org/2001/XMLSchema-instance" schemaLocation="xsi.xsd"/>
+    <xs:element name="concesionario">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" ref="coche"/>
+            </xs:sequence>
+            <xs:attribute name="provincia" use="required" type="xs:NCName"/>
+            <xs:attribute ref="xsi:noNamespaceSchemaLocation" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="coche">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="marca"/>
+                <xs:element ref="modelo"/>
+                <xs:element ref="cv"/>
+                <xs:element ref="combustible"/>
+                <xs:element ref="precio"/>
+                <xs:element ref="año"/>
+                <xs:element ref="interesado"/>
+                <xs:element ref="fecha_limite"/>
+            </xs:sequence>
+            <xs:attribute name="matricula" use="required" type="xs:NMTOKEN"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="marca" type="xs:NCName"/>
+    <xs:element name="modelo" type="xs:NCName"/>
+    <xs:element name="cv" type="xs:integer"/>
+    <xs:element name="combustible" type="xs:NCName"/>
+    <xs:element name="precio" type="xs:integer"/>
+    <xs:element name="año" type="xs:integer"/>
+    <xs:element name="interesado" type="xs:string"/>
+    <xs:element name="fecha_limite" type="xs:string"/>
+</xs:schema>

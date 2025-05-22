@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<portes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="1alimentacion.xsd">
+    <recepcion>
+        <producto>Impresora</producto>
+        <cantidad>2</cantidad>
+        <codigo_receptor>256-ab</codigo_receptor>
+    </recepcion>
+
+    <!--   Una entrega tiene siempre un atributo receptor que lleva dentro un texto. Aparte de eso, una entrega tiene siempre un elemento transportista que solo puede valer T1, T2 o T3. Después del elemento transportista hay siempre un elemento distancia. La distancia es un número mayor de 0. Es necesario que la distancia tenga un atributo unidad que indica la unidad en forma de cadena. Además, una entrega lleva un atributo coste que siempre es un entero mayor de 0. -->
+<!--    <entrega receptor="T1" coste="50">-->
+<!--        <transportista>T1</transportista>-->
+<!--        <distancia unidad="km">100</distancia>-->
+<!--    </entrega>-->
+<!--    <entrega receptor="T2" coste="100">-->
+<!--        <transportista>T2</transportista>-->
+<!--        <distancia unidad="km">200</distancia>-->
+<!--    </entrega>-->
+<!--    <entrega receptor="T3" coste="150">-->
+<!--        <transportista>T3</transportista>-->
+<!--        <distancia unidad="km">300</distancia>-->
+<!--    </entrega>-->
+</portes>
