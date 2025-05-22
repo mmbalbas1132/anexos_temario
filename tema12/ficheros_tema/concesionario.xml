@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<concesionario>
+    <coche matricula="6732KPC">
+        <marca>Seat Ateca</marca>
+        <combustible>Gasolina</combustible>
+        <precio>23000</precio>
+    </coche>
+    <coche matricula="8280KWT">
+        <marca>Volkswagen Golf</marca>
+        <combustible>Diesel</combustible>
+        <precio>25000</precio>
+    </coche>
+</concesionario>
+
+<!--
+    1. Ejemplos de recorridos centrados en el eje
+
+concesionario/coche/marca
+/concesionario/coche/@matricula
+//marca
+//@matricula
+//marca|//precio
+
+    2. Añadimos el concepto de predicado->[]: sumamos a nuestra expresion XPATH y entre CORCHETES 
+                                              condiciones que se deben cumplir en los nodos
+//coche[2]/@matricula
+//coche[@matricula="6732KPC"]/precio
+//coche[precio="23000"]
+//coche[combustible="Diesel" and precio>22000]/marca
+//coche[precio>21000][combustible="Gasolina"]/@matricula
+//coche[precio*2 > 46000]/marca
+//coche[precio*2 > 46000]/@matricula
+count(//coche[combustible="Gasolina"])->utilización de función
+sum(//precio)
+substring(//coche[@matricula="6732KPC"]/@matricula,4,1)->utilización de función
+
+    3. Selección de nodos. RECORDAD: El elemento completo, el contenido, las dos cosas...
+//coche[@matricula="6732KPC"]/node()    ->el nodo completo
+//coche/marca/text()                    ->el texto del nodo
+//coche//*                              ->todos los nodos que sean descendientes de nodo coche
+//coche/@*                              ->todos los nodos atributo de nodos coche
+
+    4. Expresiones anidadas
+Queremos obtener los coches cuyo combustible sea diferente al combustible 
+del último coche que ha llegado al concesionario
+
+"paso" 1: último coche del concesionario
+
+//coche[last()]
+
+"paso" 2: combustible del último coche del concesionario
+//coche[last()]/combustible        (si queremos el texto, añadimos /text())
+
+"paso" 3: 
+//coche[combustible != //coche[last()]/combustible]
+
+
+
+
+
+
+
+
+-->

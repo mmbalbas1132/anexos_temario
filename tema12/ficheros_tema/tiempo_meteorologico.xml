@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<temperaturas>
+    <poblacion nombre="Málaga">
+        <fecha>09/07/2020</fecha>
+        <maxima>24</maxima>
+        <minima>16</minima>
+        <viento>11km/h</viento>
+        <prevision>nubes</prevision>
+    </poblacion>
+    <poblacion nombre="Málaga">
+        <fecha>11/07/2020</fecha>
+        <maxima>22</maxima>
+        <minima>13</minima>
+        <viento>10km/h</viento>
+        <prevision>viento</prevision>
+    </poblacion>
+    <poblacion nombre="Bilbao">
+        <fecha>09/07/2020</fecha>
+        <maxima>18</maxima>
+        <minima>14</minima>
+        <viento>2km/h</viento>
+        <prevision>lluvia</prevision>
+    </poblacion>
+    <poblacion nombre="Madrid">
+        <fecha>09/07/2020</fecha>
+        <maxima>35</maxima>
+        <minima>28</minima>
+        <viento>4km/h</viento>
+        <prevision>nubes</prevision>
+    </poblacion>
+</temperaturas>
+<!-- 
+Qué previsión se tiene en Málaga para el día 11/07/2020 
+//poblacion[@nombre="Málaga"][fecha="11/07/2020"]/prevision/text()
+
+Cuántos días de previsión se tienen de Málaga 
+count(//poblacion[@nombre="Málaga"])
+
+Mostrar la temperatura máxima y mínima de Bilbao el día 9/07/2020 
+//poblacion[@nombre="Bilbao"][fecha="09/07/2020"]/maxima/text() | //poblacion[@nombre="Bilbao"][fecha="09/07/2020"]/minima/text() 
+
+Cuántas poblaciones tendrán nubes cualquier día 
+count(//poblacion[prevision="nubes"])
+
+Qué población tendrá 35º de máxima cualquier día
+//poblacion[maxima=35]/@nombre
+
+
+
+
+-->

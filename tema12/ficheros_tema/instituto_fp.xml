@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<instituto nombre="Medac FP">
+    <ciclos>
+        <especialidad nombre="Informática">
+            <ciclo id="DAW" grado="Superior">
+                Desarrollo de Aplicaciones Web
+            </ciclo>
+            <ciclo id="ASIR" grado="Superior">
+                Administración de Sistemas informáticos y Redes
+            </ciclo>
+            <ciclo id="SMR" grado="Medio">
+                Sistemas Microinformáticos y Redes
+            </ciclo>
+        </especialidad>
+
+        <especialidad nombre="Administrativo">
+            <ciclo id="GA" grado="Medio">
+                Gestión Administrativa
+            </ciclo>
+            <ciclo id="AF" grado="Superior">
+                Administración y Finanzas
+            </ciclo>
+        </especialidad>
+    </ciclos>
+    <notas>
+        <modulo ciclo="DAW" nombre="LLMM">
+            <alumno aprobado="SI">
+                <nombre>Federico Ruiz</nombre>
+                <nota>8</nota>
+                <sexo>Hombre</sexo>
+            </alumno>
+            <alumno aprobado="NO">
+                <nombre>Silvia Martín</nombre>
+                <sexo>Mujer</sexo>
+            </alumno>
+            <alumno aprobado="SI">
+                <nombre>Manolo Chicón</nombre>
+                <nota>8</nota>
+                <sexo>Hombresexo</sexo>
+            </alumno>
+        </modulo>
+
+        <modulo ciclo="DAW" nombre="PRO">
+            <alumno aprobado="SI">
+                <nombre>Federio Ruiz</nombre>
+                <nota>9</nota>
+                <sexo>Hombre</sexo>
+            </alumno>
+            <alumno aprobado="SI">
+                <nombre>Silvia Martín</nombre>
+                <nota>6</nota>
+                <sexo>Mujer</sexo>
+            </alumno>
+            <alumno aprobado="SI">
+                <nombre>Manolo Chicón</nombre>
+                <nota>5</nota>
+                <sexo>Hombre</sexo>
+            </alumno>
+        </modulo>
+    </notas>
+</instituto>
+
+<!--
+    Nombre del instituto
+    //instituto/@nombre
+
+    Qué ciclos se imparten de la familia de Informática 
+    //especialidad[@nombre="Informática"]/ciclo
+
+    Número de ciclos superiores 
+    count(//ciclo[@grado="Superior"])
+
+    Último ciclo de la familia de Informática sin la etiqueta ciclo
+    //especialidad[@nombre="Informática"]/ciclo[last()]/text()
+
+    Número de aprobados en LLMM
+    count(//modulo[@nombre="LLMM"]/alumno[@aprobado="SI"])
+
+    Nota de Silvia Martín en PRO con un texto introductorio
+    //modulo[@nombre="PRO"]/alumno[nombre="Silvia Martín"]/nota/text()
+
+    Lista de clase de LLMM
+    //modulo[@nombre="LLMM"]/node()/nombre/text()
+
+
+
+
+-->

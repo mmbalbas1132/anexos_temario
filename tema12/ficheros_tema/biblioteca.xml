@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<biblioteca>
+  <libro>
+    <titulo>La vida está en otra parte</titulo>
+    <autor>Milan Kundera</autor>
+    <fechaPublicacion año="1973"/>
+    <editorial>Anaya</editorial>
+  </libro>
+  <libro>
+    <titulo>Pantaleón y las visitadoras</titulo>
+    <autor fechaNacimiento="28/03/1936">Mario Vargas Llosa</autor>
+    <fechaPublicacion año="1973"/>
+    <editorial>Anaya</editorial>
+  </libro>
+  <libro>
+    <titulo>Conversación en la catedral</titulo>
+    <autor fechaNacimiento="28/03/1936">Mario Vargas Llosa</autor>
+    <fechaPublicacion año="1969"/>
+  </libro>
+</biblioteca>
+
+<!--
+  1. Para listar los títulos de los libros de la biblioteca
+  /biblioteca/libro/autor
+
+  2. Para listar los autores sin indicar de qué nodo son hijos:
+  //autor
+
+  3. Para listar los identificadores de los libros:
+  /bib/book/@id
+
+  4. Para listar todos los atributos de cualquier nodo:
+  //@*
+
+  5. Listar sólo los títulos de los libros de la biblioteca sin las etiquetas:
+  /biblioteca/libro/autor/text()
+
+  6. Listar todos los autores y todas las editoriales
+  /biblioteca/libro/autor|/biblioteca/libro/editorial
+
+  7. Listar el tercer libro
+  /biblioteca/libro[position()=3]
+
+  8. Listar del segundo al tercer libro
+  /biblioteca/libro[position()=2 to position()=3]
+
+  CONSULTAS ANIDADAS
+  9. mostrar todos los títulos de los libros del autor que escribió "Pantaleón y las visitadoras"
+  /biblioteca/libro[titulo="Pantaleón y las visitadoras"]/autor/text()
+
+  Para saber los libros que escribió un autor escribimos
+  /biblioteca/libro[autor="Mario Vargas Llosa"]/titulo
+
+  /biblioteca/libro[autor=/biblioteca/libro[titulo="Pantaleón y las visitadoras"]/autor/text()]/titulo/text()
+
+
+
+
+-->
