@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="desayuno.xsl"?>
+<carta tipo="desayunos">
+  <desayuno>
+    <nombre>Smoothie de frutas</nombre>
+    <precio>3.50</precio>
+    <descripcion>Batido natural de frutas variadas</descripcion>
+  </desayuno>
+  <desayuno>
+    <nombre>Café con tostada</nombre>
+    <precio>2.00</precio>
+    <descripcion>Tostada de pan con aceite de oliva y café</descripcion>
+  </desayuno>
+  <desayuno>
+    <nombre>Yogur con cereales</nombre>
+    <precio>2.80</precio>
+    <descripcion>Yogur natural con mezcla de cereales</descripcion>
+  </desayuno>
+  <desayuno>
+    <nombre>Fruta fresca</nombre>
+    <precio>2.50</precio>
+    <descripcion>Plato de fruta variada de temporada</descripcion>
+  </desayuno>
+</carta>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="articulo.xsl"?>
+<articulo>
+    <titulo> The Matrix: una nueva realidad </titulo>
+    <autores>
+        <autor> Miguel Cazorla </autor>
+        <autor> Neo Fernández </autor>
+    </autores>
+    <resumen>
+        Esta película ofrece una realidad dentro
+        de otra. Las máquinas han esclavizado a los
+        humanos pero estos no lo saben. Viven conectados a
+        The Matrix, un complejo simulador de realidad que les
+        hace sentir y pensar como si fueran individuos libres.
+    </resumen>
+    <texto>
+        <parrafo>
+            La relación de esta película con la Inteligencia
+            Artificial (I.A.) es inmediata. Morpheus nombra el
+            término I.A. en la secuencia en la cual explica a
+            Neo su situación y la de toda la humanidad.
+        </parrafo>
+        <imagen alin="izq"> morpheus.jpg </imagen>
+        <parrafo>
+            En la explicación hace referencia a que los
+            avances en I.A. en el siglo XX provocan que las
+            máquinas tomen conciencia de sí mismas y
+            que vean en los hombres un enemigo al que destruir.
+        </parrafo>
+    </texto>
+</articulo>

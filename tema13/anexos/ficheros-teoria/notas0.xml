@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="notas0.xsl"?>
+<instituto nombre="Malaga Formacion">
+  <ciclos>
+    <especialidad nombre="Informatica">
+      <ciclo id="DAW" grado="Superior">Desarrollo de Aplicaciones Web</ciclo>
+      <ciclo id="ASIR" grado="Superior">Administracion de Sistemas Informaticos y Redes</ciclo>
+      <ciclo id="SMR" grado="Medio">Sistemas Microinformaticos y Redes</ciclo>
+    </especialidad>
+    <especialidad nombre="Administrativo">
+      <ciclo id="GA" grado="Medio">Gestion Administrativa</ciclo>
+      <ciclo id="AF" grado="Superior">Administracion y Finanzas</ciclo>
+    </especialidad>
+  </ciclos>
+  <notas>
+    <modulo ciclo="DAW" nombre="LLMM">
+      <alumno>
+        <nombre>Federico Ruiz</nombre>
+        <nota>5</nota>
+        <sexo>Hombre</sexo>
+      </alumno>
+      <alumno>
+        <nombre>Silvia Martin</nombre>
+        <nota>2</nota>
+        <sexo>Mujer</sexo>
+      </alumno>
+      <alumno>
+        <nombre>Manolo Chicon</nombre>
+        <nota>8</nota>
+        <sexo>Hombre</sexo>
+      </alumno>
+    </modulo>
+    <modulo ciclo="DAW" nombre="PRO">
+      <alumno>
+        <nombre>Federico Ruiz</nombre>
+        <nota>5</nota>
+        <sexo>Hombre</sexo>
+      </alumno>
+      <alumno>
+        <nombre>Silvia Martin</nombre>
+        <nota>6</nota>
+        <sexo>Mujer</sexo>
+      </alumno>
+      <alumno>
+        <nombre>Manolo Chicon</nombre>
+        <nota>5</nota>
+        <sexo>Hombre</sexo>
+      </alumno>
+    </modulo>
+  </notas>
+</instituto>
