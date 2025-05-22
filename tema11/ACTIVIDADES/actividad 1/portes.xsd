@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <!-- Definición del esquema XML para el archivo "portes.xml" -->
+
+    <!-- Elemento raíz llamado "portes" -->
+    <xs:element name="portes">
+        <xs:complexType>
+            <!-- El elemento "portes" puede contener una cantidad ilimitada de elementos "recepcion" o "entrega" en cualquier orden -->
+            <xs:choice maxOccurs="unbounded">
+                <xs:element ref="recepcion"/>
+                <xs:element ref="entrega"/>
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Definición del elemento "recepcion" -->
+    <xs:element name="recepcion">
+        <xs:complexType>
+            <xs:sequence>
+                <!-- Elemento obligatorio "producto" que contiene texto -->
+                <xs:element name="producto" type="xs:string"/>
+
+                <!-- Elemento obligatorio "cantidad" que debe ser un número decimal positivo -->
+                <xs:element name="cantidad">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:decimal">
+                            <xs:minExclusive value="0"/> <!-- Valor debe ser mayor que 0 -->
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+
+                <!-- Elemento opcional "codigoreceptor" con un patrón específico: 3 dígitos, guion, 3 letras -->
+                <xs:element name="codigoreceptor" minOccurs="0">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:pattern value="\d{3}-[a-zA-Z]{3}"/> <!-- Ejemplo válido: 123-abc -->
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Definición del elemento "entrega" -->
+    <xs:element name="entrega">
+        <xs:complexType>
+            <xs:sequence>
+                <!-- Elemento obligatorio "transportista" con valores restringidos a T1, T2 o T3 -->
+                <xs:element name="transportista">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="T1"/> <!-- Valor permitido: T1 -->
+                            <xs:enumeration value="T2"/> <!-- Valor permitido: T2 -->
+                            <xs:enumeration value="T3"/> <!-- Valor permitido: T3 -->
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+
+                <!-- Elemento obligatorio "distancia" que contiene un número positivo y un atributo "unidad" -->
+                <xs:element name="distancia">
+                    <xs:complexType>
+                        <xs:simpleContent>
+                            <xs:extension base="xs:decimal">
+                                <xs:attribute name="unidad" type="xs:string" use="required"/> <!-- Atributo obligatorio -->
+                            </xs:extension>
+                        </xs:simpleContent>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+
+            <!-- Atributo obligatorio "receptor" que contiene texto -->
+            <xs:attribute name="receptor" type="xs:string" use="required"/>
+
+            <!-- Atributo obligatorio "coste" que debe ser un número entero mayor que 0 -->
+            <xs:attribute name="coste">
+                <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                        <xs:minExclusive value="0"/> <!-- Valor debe ser mayor que 0 -->
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

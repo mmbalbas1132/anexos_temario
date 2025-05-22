@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="portes.xsd">
+    <recepcion>
+        <producto>Manzanas</producto>
+        <cantidad>10.5</cantidad>
+        <codigoreceptor>123-abc</codigoreceptor>
+    </recepcion>
+    <entrega receptor="Supermercado A" coste="50">
+        <transportista>T1</transportista>
+        <distancia unidad="km">100</distancia>
+    </entrega>
+    <recepcion>
+        <producto>Peras</producto>
+        <cantidad>5.0</cantidad>
+    </recepcion>
+    <entrega receptor="Supermercado B" coste="75">
+        <transportista>T2</transportista>
+        <distancia unidad="km">150</distancia>
+    </entrega>
+</portes>
